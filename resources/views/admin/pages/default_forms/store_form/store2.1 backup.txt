@@ -1,0 +1,1594 @@
+
+        <style>
+/*        .rel-26{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }*/
+/*       input[type="text"] {
+                  border: none;
+              }*/
+    </style>
+<?php
+ 
+?>
+
+
+<div class="content">
+
+    <div class="page-inner">
+      
+        
+    
+
+        <form id="submitForm" method="POST">
+            @csrf
+            <input type="hidden" name="form_unique_id" class="form_unique_id" value="{{$form_data['unique_form_id']}}">
+            <input type="hidden" name="unit_office_to" value="{{$form_data['unit_office_to']}}">
+            <input type="hidden" name="unit_office" value="{{$form_data['unit_office']}}">
+            <input type="hidden" name="office" value="{{$form_data['office']}}">
+            <input type="hidden" name="department" value="{{$form_data['department']}}">
+            <input type="hidden" name="ministry" value="{{$form_data['ministry']}}">
+            <input type="hidden" name="form_id" value="{{$form_data['form_id']}}">
+            <input type="hidden" name="form_year" value="{{$form_data['form_year']}}">
+            <input type="hidden" name="quarter" value="{{$form_data['quarter']}}">
+            <div class="rel-26">
+                <h3>২.১ বার্ষিক কর্মসম্পাদন চুক্তি (এপিএ){{$form_data['form_year']}} এর {{$form_data['quarter']}} অর্জন (সেকশন-৩):</h3>   
+                <table border="1" width="100%" id="myTable">
+                     <thead>
+                          <tr>
+                              <td rowspan="2">কার্যক্রম</td>
+                              <td rowspan="2">কর্মসম্পাদন সূচক</td>
+                              <td rowspan="2">একক</td>
+                              <td rowspan="2">কর্মসম্পাদন সূচকের মান</td>
+                              <td rowspan="2">বাৎসরিক লক্ষ্যমাত্রা ২০২১-২২</td>
+                              <td colspan="5">অর্জন</td>
+                              <td rowspan="2">বাস্তবায়নের জন্য দায়িত্বপ্রাপ্ত শাখা</td>
+                          </tr>
+                          <tr>
+                              <td>(জানুয়ারি ২০২১-মার্চ ২০২২)Q1</td>
+                              <td>(এপ্রিল   ২০২১-জুন ২০২২)Q2</td>
+                              <td>(জুলাই   ২০২১-সেপ্টেম্বর ২০২২)Q3</td>
+                              <td>(জুলাই   ২০২১-সেপ্টেম্বর ২০২২)Q3</td>
+                              <td>total</td>
+                              
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="row1">
+                             {{-- <input type="hidden" name="row_id" value="1"> --}}
+
+                             <td><textarea name="activities_1" id="" cols="20" rows="7">
+                               [১.১] হাউস বিল্ডিং ফাইনান্স কর্পোরেশন আইন, ২০২০ (সংশোধন) প্রণয়ন
+                             </textarea></td>
+
+
+                             <td><textarea name="performance_index_1" id="" cols="20" rows="7">
+                               [১.১.১] গেজেটে প্রকাশিত
+                             </textarea></td>
+                             
+                           
+                            {{-- <td class="column1 style7 s"><input type="text" name="performance_index_1" id="" value=""></td> --}}
+                            <td class="column2 style7 s"><input type="text" name="unit_1" id="" value="তারিখ"></td>
+                            <td class="column3 style56 n"><input type="text" name="performance_index_values_1" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_1" id="" value="৩০-০৪-২০২২"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_1" id="txtCal1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_1" id="txtCal1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_1" id="txtCal1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_1" id="txtCal1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_1" id="total_sum_value_1" value="">-</td>
+                            <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control" id="" name="branch_responsible_implementation_1">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row2">
+                          <input type="hidden" name="row_id" value="2">
+                            <td class="column0 style7 s"><input type="text"  name="activities_2" id="" value="[১.২] পল্লী সঞ্চয় ব্যাংক কর্মচারি চাকরি প্রবিধানমালা প্রণয়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_2" id="" value="[১.২.১] প্রশাসনিক উন্নয়ন সংক্রান্ত সচিব কমিটিতে প্রেরিত"></td>
+                            <td class="column2 style7 s"><input type="text" name="unit_2" id="" value="তারিখ"></td>
+                            <td class="column3 style56 n"><input type="text" name="performance_index_values_2" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_2" id="" value="৩১-০৫-২০২২"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_2" id="txtCal2" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_2" id="txtCal2" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_2" id="txtCal2" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_2" id="txtCal2" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_2" id="total_sum_value_2" value="">-</td>
+                               <td class="column7 style6 s">
+                                         <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_2">
+                                        <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row3">
+                          <input type="hidden" name="row_id" value="3">
+                            <td class="column0 style7 s"><input type="text" name="activities_3" id="" value="[১.৩] কর্মসংস্থান ব্যাংক কর্মচারি চাকরি প্রবিধানমালা প্রণয়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_3" id="" value="[১.৩.১] ভেটিং এর জন্য লেজিসলেটিভ ও সংসদ বিষয়ক বিভাগে প্রেরিত"></td>
+                            <td class="column2 style7 s"><input type="text" name="unit_3" id="" value="তারিখ"></td>
+                            <td class="column3 style56 n"><input type="text" name="performance_index_values_3" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_3" id="" value="৩০-০৫-২০২"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_3" id="txtCal3" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_3" id="txtCal3" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_3" id="txtCal3" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_3" id="txtCal3" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_3" id="total_sum_value_3" value="">-</td>
+                             <td class="column7 style6 s">
+                                         <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_3">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row4">
+                          <input type="hidden" name="row_id" value="4">
+                            <td class="column0 style7 s"><input type="text" name="activities_4" id="" value="[১.৪] ফাইন্যান্স কোম্পানি আইন প্রণয়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_4" id="" value="[১.৪.১] ভেটিং এর জন্য লেজিসলেটিভ ও সংসদ বিষয়ক বিভাগে প্রেরিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_4" id="" value="তারিখ"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_4" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_4" id="" value="৩০-০৫-২০২২"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_4" id="txtCal4" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_4" id="txtCal4" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_4" id="txtCal4" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_4" id="txtCal4" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_4" id="total_sum_value_4" value="">-</td>
+                            <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_4">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row5">
+                          <input type="hidden" name="row_id" value="5">
+                            <td class="column0 style7 s"><input type="text" name="activities_5" id="" value="[১.৫] এ্যাসেট ম্যানেজমেন্ট কর্পোরেশন আইন প্রণয়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_5" id="" value="[১.৫.১] মন্ত্রিসভায় নীতিগত অনুমোদনের জন্য প্রেরিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_5" id="" value="তারিখ"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_5" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_5" id="" value="৩০-০৪-২০২২"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_5" id="txtCal5" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_5" id="txtCal5" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_5" id="txtCal5" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_5" id="txtCal5" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_5" id="total_sum_value_5" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_5">
+                                        <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row6">
+                          <input type="hidden" name="row_id" value="6">
+                            <td class="column0 style7 s"><input type="text" name="activities_6" id="" value="[১.৬] ব্যাংক কোম্পানি আইন সংশোধন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_6" id="" value="[১.৬.১] ভেটিং এর জন্য লেজিসলেটিভ ও সংসদ বিষয়ক বিভাগে প্রেরিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_6" id="" value="তারিখ"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_6" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_6" id="" value="৩০-০৪-২০২২"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_6" id="txtCal6" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_6" id="txtCal6" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_6" id="txtCal6" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_6" id="txtCal6" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_6" id="total_sum_value_6" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_6">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row7">
+                          <input type="hidden" name="row_id" value="7">
+                            <td class="column0 style7 s"><input type="text" name="activities_7" id="" value="[১.৭] ব্যাংক আমানত বীমা (সংশোধন) আইন, ২০২১ প্রণয়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_7" id="" value="[১.৭.১] ভেটিং এর জন্য লেজিসলেটিভ ও সংসদ বিষয়ক বিভাগে প্রেরিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_7" id="" value="তারিখ"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_7" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_7" id="" value="৩১-০৫-২০২২"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_7" id="txtCal7" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_7" id="txtCal7" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_7" id="txtCal7" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_7" id="txtCal7" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_7" id="total_sum_value_7" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_7">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row8">
+                          <input type="hidden" name="row_id" value="8">
+                            <td class="column0 style5 s style5" rowspan="2"><input type="text" name="activities_8" id="" value="[১.৮] বীমা বিষয়ক বিধিমালা/ প্রবিধানমালা প্রণয়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_8" id="" value="[১.৮.১] ভেটিং এর জন্য লেজিসলেটিভ ও সংসদ বিষয়ক বিভাগে প্রেরিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_8" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_8" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_8" id="" value="2"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_8" id="txtCal8" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_8" id="txtCal8" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_8" id="txtCal8" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_8" id="txtCal8" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_8" id="total_sum_value_8" value="">-</td>
+                            <td class="column7 style6 s">
+                                         <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_8">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row8">
+                          <input type="hidden" name="row_id_8_1" value="8">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_8_1" id="" value="[১.৮.২] গেজেটে প্রকাশিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_8_1" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_8_1" id="" value="1"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_8_1" id="" value="2"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_8_1" id="txtCal8_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_8_1" id="txtCal8_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_8_1" id="txtCal8_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_8_1" id="txtCal8_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_8_1" id="total_sum_value_8_1" value="">-</td>
+                            <td class="column7 style6 s">
+                                         <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_8_1">
+                                        <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row9">
+                          <input type="hidden" name="row_id" value="9">
+                            <td class="column0 style7 s"><input type="text" name="activities_9" id="" value="[১.৯] বিভাগের কর্মচারীদের সক্ষমতার উন্নয়নে সমসাময়িক বিষয়ে লার্নিং সেশন আয়োজন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_9" id="" value="[১.৯.১] লার্নিং সেশন আয়োজিত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_9" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_9" id="" value="1"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_9" id="" value="6"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_9" id="txtCal9" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_9" id="txtCal9" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_9" id="txtCal9" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_9" id="txtCal9" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_9" id="total_sum_value_9" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_9">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row10">
+                          <input type="hidden" name="row_id" value="10">
+                            <td class="column0 style7 s"><input type="text" name="activities_10" id="" value="[২.১] রাষ্ট্র মালিকানাধীন বাণিজ্যিক ব্যাংকসমূহের শ্রেণিকৃত ঋণের পরিমাণ হ্রাসকরণ"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_10" id="" value="[২.১.১] শ্রেণিকৃত ঋণের পরিমাণ"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_10" id="" value="হাজার কোটি টাকা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_10" id="" value="2"></td>
+                            <td class="column4 style9 n"><input type="text" name="annual_target_10" id="" value="40.50"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_10" id="txtCal10" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_10" id="txtCal10" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_10" id="txtCal10" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_10" id="txtCal10" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_10" id="total_sum_value_10" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_10">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row11">
+                          <input type="hidden" name="row_id" value="11">
+                            <td class="column0 style59 s style61" rowspan="3"><input type="text" name="activities_11" id="" value="[২.২] ব্যাংকের মাধ্যমে ঋণ বিতরণ ও আদায় কার্যক্রম তত্ত্বাবধান"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_11" id="" value="[২.২.১] বিতরণকৃত কৃষিঋণ"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_11" id="" value="হাজার কোটি টাকা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_11" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_11" id="" value="24"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_11" id="txtCal11" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_11" id="txtCal11" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_11" id="txtCal11" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_11" id="txtCal11" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_11" id="total_sum_value_11" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_11">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row11">
+                          <input type="hidden" name="row_id_11_1" value="11">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_11_1" id="" value="[২.২.২] বিতরণকৃত বঙ্গবন্ধু যুবঋণ"></td>
+                            <td class="column2 style7 s"><input type="text" name="unit_11_1" id="" value="সংখ্যা (হাজার)"></td>
+                            <td class="column3 style56 n"><input type="text" name="performance_index_values_11_1" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_11_1" id="" value="25"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_11_1" id="txtCal11_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_11_1" id="txtCal11_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_11_1" id="txtCal11_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_11_1" id="txtCal11_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_11_1" id="total_sum_value_11_1" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_11_1">
+                                        <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row11">
+                          <input type="hidden" name="row_id_11_2" value="11">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_11_2" id="" value="[২.২.৩] বিতরণকৃত এসএমই ঋণ"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_11_2" id="" value="হাজার কোটি টাকা"></td>
+                            <td class="column3 style6 s"><input type="text" name="performance_index_values_11_2" id="" value="2"></td>
+                            <td class="column4 style6 s"><input type="text" name="annual_target_11_2" id="" value="165"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_11_2" id="txtCal11_2" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_11_2" id="txtCal11_2" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_11_2" id="txtCal11_2" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_11_2" id="txtCal11_2" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_11_2" id="total_sum_value_11_2" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_11_2">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row12">
+                          <input type="hidden" name="row_id" value="12">
+                            <td class="column0 style5 s style5" rowspan="2"><input type="text" name="activities_12" id="" value="[২.৩] নারী উদ্যোক্তাদের মধ্যে এসএমই ঋণ বিতরণ কার্যক্রম তত্ত্বাবধান"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_12" id="" value="[২.৩.১] বিতরণকৃত ঋণের পরিমাণ"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_12" id="" value="কোটি টাকা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_12" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_12" id="" value="745"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_12" id="txtCal12" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_12" id="txtCal12" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_12" id="txtCal12" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_12" id="txtCal12" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_12" id="total_sum_value_12" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_12">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row12">
+                          <input type="hidden" name="row_id_12_1" value="12">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_12_1" id="" value="[২.৩.২] নতুন উদ্যোক্তার সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_12_1" id="" value="সংখ্যা (হাজার)"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_12_1" id="" value="1"></td>
+                            <td class="column4 style9 n"><input type="text" name="annual_target_12_1" id="" value="11.50"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_12_1" id="txtCal12_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_12_1" id="txtCal12_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_12_1" id="txtCal12_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_12_1" id="txtCal12_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_12_1" id="total_sum_value_12_1" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_12_1">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row13">
+                          <input type="hidden" name="row_id" value="13">
+                            <td class="column0 style7 s"><input type="text" name="activities_13" id="" value="[২.৪] এজেন্ট ব্যাংকিং কার্যক্রম সম্প্রসারণ"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_13" id="" value="[২.৪.১] নতুন গ্রাহক সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_13" id="" value="সংখ্যা (লক্ষ)"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_13" id="" value="1"></td>
+                            <td class="column4 style9 n"><input type="text" name="annual_target_13" id="" value="23.50"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_13" id="txtCal13" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_13" id="txtCal13" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_13" id="txtCal13" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_13" id="txtCal13" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_13" id="total_sum_value_13" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_13">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row14">
+                          <input type="hidden" name="row_id" value="14">
+                            <td class="column0 style7 s"><input type="text" name="activities_14" id="" value="[২.৫] ব্যাংকের মাধ্যমে সামাজিক নিরাপত্তার সুবিধা প্রদান"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_14" id="" value="২.৫.১] সুবিধা গ্রহণকারীর সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_14" id="" value="সংখ্যা (লক্ষ)"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_14" id="" value="1"></td>
+                            <td class="column4 style9 n"><input type="text" name="annual_target_14" id="" value="25.10"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_14" id="txtCal14" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_14" id="txtCal14" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_14" id="txtCal14" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_14" id="txtCal14" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_14" id="total_sum_value_14" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_14">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row15">
+                          <input type="hidden" name="row_id" value="15">
+                            <td class="column0 style5 s style5" rowspan="2"><input type="text" name="activities_15" id="" value="[২.৬] বিভাগ কর্তৃক ব্যাংকিং কার্যক্রম তত্ত্বাবধান ও গৃহীত সিদ্ধান্ত বাস্তবায়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_15" id="" value="[২.৬.১] শ্রেণিকৃত ঋণের হার হ্রাসকরণের উদ্দেশ্যে বিভাগে আয়োজিত সভার সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_15" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_15" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_15" id="" value="4"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_15" id="txtCal15" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_15" id="txtCal15" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_15" id="txtCal15" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_15" id="txtCal15" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_15" id="total_sum_value_15" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_15">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row15">
+                          <input type="hidden" name="row_id_15_1" value="15">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_15_1" id="" value="[২.৬.২] সভায় গৃহীত সিদ্ধান্ত বাস্তবায়ন"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_15_1" id="" value="%"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_15_1" id="" value="1"></td>
+                            <td class="column4 style12 n"><input type="text" name="annual_target_15_1" id="" value="$-5000445]0.2f%"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_15_1" id="txtCal15_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_15_1" id="txtCal15_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_15_1" id="txtCal15_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_15_1" id="txtCal15_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_15_1" id="total_sum_value_15_1" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_15_1">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row16">
+                          <input type="hidden" name="row_id" value="16">
+                            <td class="column0 style7 s"><input type="text" name="activities_16" id="" value="[৩.১] দেশব্যাপী ফাইন্যান্সিয়াল লিটারেসি ও বিনিয়োগকারীগণের প্রশিক্ষণ প্রদান"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_16" id="" value="[৩.১.১] কার্যক্রমে অংশগ্রহণকারী"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_16" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_16" id="" value="3"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_16" id="" value="7000"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_16" id="txtCal16" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_16" id="txtCal16" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_16" id="txtCal16" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_16" id="txtCal16" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_16" id="total_sum_value_16" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_16">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row17">
+                          <input type="hidden" name="row_id" value="17">
+                            <td class="column0 style7 s"><input type="text" name="activities_17" id="" value="[৩.২] মূলধন উত্তোলনের লক্ষ্যে আইপিও/ আরপিও/রাইট/ ডেট সিকিউরিটিজ ইস্যুকরণ"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_17" id="" value="[৩.২.১] আইপিও/ আরপিও/ রাইট/ডেট সিকিউরিটিজ ইস্যুকৃত"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_17" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_17" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_17" id="" value="20"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_17" id="txtCal17" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_17" id="txtCal17" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_17" id="txtCal17" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_17" id="txtCal17" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_17" id="total_sum_value_17" value="">-</td>
+                            <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_17">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row18">
+                          <input type="hidden" name="row_id" value="18">
+                            <td class="column0 style7 s"><input type="text" name="activities_18" id="" value="[৩.৩] CMDP-III প্রকল্পের আওতায় BSEC অটোমেশন বাস্তবায়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_18" id="" value="[৩.৩.১] বাস্তবায়নের হার"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_18" id="" value="%"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_18" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_18" id="" value="80"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_18" id="txtCal18" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_18" id="txtCal18" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_18" id="txtCal18" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_18" id="txtCal18" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_18" id="total_sum_value_18" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_18">
+                                        <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row19">
+                          <input type="hidden" name="row_id" value="19">
+                            <td class="column0 style7 s"><input type="text" name="activities_19" id="" value="[৩.৪] পোস্ট গ্র্যাজুয়েট ডিপ্লোমা ইন ক্যাপিটাল মার্কেট বিষয়ক প্রশিক্ষণ"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_19" id="" value="[৩.৪.১] অংশগ্রহণকারী উপকারভোগী"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_19" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_19" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_19" id="" value="30"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_19" id="txtCal19" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_19" id="txtCal19" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_19" id="txtCal19" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_19" id="txtCal19" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_19" id="total_sum_value_19" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_19">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row20">
+                          <input type="hidden" name="row_id" value="20">
+                            <td class="column0 style7 s"><input type="text" name="activities_20" id="" value="[৩.৫] সার্টিফিকেট কোর্স অন ক্যাপিটাল মার্কেট"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_20" id="" value="[৩.৫.১] আয়োজিত প্রোগ্রাম"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_20" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_20" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_20" id="" value="22"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_20" id="txtCal20" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_20" id="txtCal20" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_20" id="txtCal20" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_20" id="txtCal20" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_20" id="total_sum_value_20" value="">-</td>
+                            <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_20">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row21">
+                          <input type="hidden" name="row_id" value="21">
+                            <td class="column0 style5 s style5" rowspan="2"><input type="text" name="activities_21" id="" value="[৩.৬] বিভাগ কর্তৃক পুঁজিবাজার কার্যক্রম তত্ত্বাবধান ও গৃহীত সিদ্ধান্ত বাস্তবায়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_21" id="" value="[৩.৬.১] পুঁজিবাজারের বিনিয়োগ বৃদ্ধির উদ্দেশ্যে বিভাগে আয়োজিত সভার সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_21" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_21" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_21" id="" value="4"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_21" id="txtCal21" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_21" id="txtCal21" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_21" id="txtCal21" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_21" id="txtCal21" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_21" id="total_sum_value_21" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_21">
+                                       <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row21">
+                          <input type="hidden" name="row_id_21_1" value="21">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_21_1" id="" value="[৩.৬.২] সভায় গৃহীত সিদ্ধান্ত বাস্তবায়ন"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_21_1" id="" value="%"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_21_1" id="" value="1"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_21_1" id="" value="100"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_21_1" id="txtCal21_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_21_1" id="txtCal21_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_21_1" id="txtCal21_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_21_1" id="txtCal21_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_21_1" id="total_sum_value_21_1" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_21_1">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row22">
+                          <input type="hidden" name="row_id" value="22">
+                            <td class="column0 style7 s"><input type="text" name="activities_22" id="" value="[৪.১] 'বঙ্গবন্ধু শিক্ষা বীমা' বাস্তবায়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_22" id="" value="[৪.১.১] ‘বঙ্গবন্ধু শিক্ষা বীমা’ নতুন গ্রাহক সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_22" id="" value="সংখ্যা (হাজার)"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_22" id="" value="3"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_22" id="" value="50"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_22" id="txtCal22" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_22" id="txtCal22" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_22" id="txtCal22" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_22" id="txtCal22" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_22" id="total_sum_value_22" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_22">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row23">
+                          <input type="hidden" name="row_id" value="23">
+                            <td class="column0 style7 s"><input type="text" name="activities_23" id="" value="[৪.২] 'বঙ্গবন্ধু সুরক্ষা বীমা' বাস্তবায়ন"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_23" id="" value="[৪.২.১] 'বঙ্গবন্ধু সুরক্ষা বীমা' নতুন গ্রাহক সংখ্যা"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_23" id="" value="সংখ্যা (হাজার)"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_23" id="" value="2"></td>
+                            <td class="column4 style13 n"><input type="text" name="annual_target_23" id="" value="2.5"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_23" id="txtCal23" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_23" id="txtCal23" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_23" id="txtCal23" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_23" id="txtCal23" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_23" id="total_sum_value_23" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_23">
+                                        <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row24">
+                          <input type="hidden" name="row_id" value="24">
+                            <td class="column0 style7 s"><input type="text" name="activities_24" id="" value="[৪.৩] বীমা বিষয়ে প্রশিক্ষণ প্রদান"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_24" id="" value="[৪.৩.১] প্রশিক্ষিত জনবল"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_24" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_24" id="" value="2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_24" id="" value="800"></td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_24" id="txtCal24" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_24" id="txtCal24" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_24" id="txtCal24" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_24" id="txtCal24" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_24" id="total_sum_value_24" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_24">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row25">
+                          <input type="hidden" name="row_id" value="25">
+                            <td class="column0 style7 s"><input type="text" name="activities_25" id="" value="[৪.৪] বীমা বিষয়ে জনসচেতনতা বৃদ্ধি"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_25" id="" value="[৪.৪.১] আয়োজিত ওয়ার্কশপ/সেমিনার"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_25" id="" value="সংখ্যা"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_25" id="" value="1"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_25" id="" value="8"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_25" id="txtCal25" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_25" id="txtCal25" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_25" id="txtCal25" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_25" id="txtCal25" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_25" id="total_sum_value_25" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_25">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row26">
+                          <input type="hidden" name="row_id" value="26">
+                            <td class="column0 style7 s"><input type="text" name="activities_26" id="" value="[৪.৫] বীমা দাবী নিষ্পত্তির হার বৃদ্ধি"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_26" id="" value="[৪.৫.১] নিষ্পত্তিকৃত দাবির হার"></td>
+                            <td class="column2 style6 s"><input type="text" name="unit_26" id="" value="%"></td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_26" id="" value="1"></td>
+                            <td class="column4 style13 n"><input type="text" name="annual_target_26" id="" value="70.5"></td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_26" id="txtCal26" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_26" id="txtCal26" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_26" id="txtCal26" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_26" id="txtCal26" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_26" id="total_sum_value_26" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_26">
+                                       <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row27">
+                          <input type="hidden" name="row_id" value="27">
+                            <td class="column0 style5 s style5" rowspan="2"><input type="text" name="activities_27" id="" value="[৪.৬] বিভাগ কর্তৃক বীমা কার্যক্রম তত্ত্বাবধান ও গৃহীত সিদ্ধান্ত বাস্তবায়ন"> </td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_27" id="" value="[৪.৬.১] বীমা দাবী নিস্পত্তির হার বৃদ্ধির উদ্দেশ্যে বিভাগে আয়োজিত সভার সংখ্যা"> </td>
+                            <td class="column2 style6 s"><input type="text" name="unit_27" id="" value="সংখ্যা"> </td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_27" id="" value=" 2"></td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_27" id="" value="4"> </td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_27" id="txtCal27" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_27" id="txtCal27" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_27" id="txtCal27" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_27" id="txtCal27" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_27" id="total_sum_value_27" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_27">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row27">
+                          <input type="hidden" name="row_id_27_1" value="27">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_27_1" id="activities_27_1" value="[৪.৬.২] সভায় গৃহীত সিদ্ধান্ত বাস্তবায়ন"> </td>
+                            <td class="column2 style6 s"><input type="text" name="unit_27_1" id="" value="%"> </td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_27_1" id="" value="1"> </td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_27_1" id="" value="100"> </td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_27_1" id="txtCal27_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_27_1" id="txtCal27_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_27_1" id="txtCal27_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_27_1" id="txtCal27_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_27_1" id="total_sum_value_27_1" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_27_1">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row28">
+                          <input type="hidden" name="row_id" value="28">
+                            <td class="column0 style5 s style5" rowspan="2"><input type="text" name="activities_28" id="" value=" [৫.১] ক্ষুদ্রঋণ বিতরণ ও আদায় কার্যক্রম তত্ত্বাবধান"></td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_28" id="" value="[৫.১.১] বিতরণকৃত ক্ষুদ্রঋণ"> </td>
+                            <td class="column2 style6 s"><input type="text" name="unit_28" id="" value="হাজার কোটি টা"> </td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_28" id="" value="3"> </td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_28" id="" value="170"> </td>
+                             <td class="column5 style7 s"><input type="text"  name="acquisition1_28" id="txtCal28" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_28" id="txtCal28" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_28" id="txtCal28" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_28" id="txtCal28" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_28" id="total_sum_value_28" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_28">
+                                          <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row28">
+                          <input type="hidden" name="row_id_28_1" value="28">
+                            <td class="column1 style7 s"><input type="text" name="performance_index_28_1" id="" value="[৫.১.২] আদায়কৃত ক্ষুদ্রঋণ"> </td>
+                            <td class="column2 style6 s"><input type="text" name="unit_28_1" id="" value="হাজার কোটি টাকা"> </td>
+                            <td class="column3 style8 n"><input type="text" name="performance_index_values_28_1" id="" value="3"> </td>
+                            <td class="column4 style9 n"><input type="text" name="annual_target_28_1" id="" value="152.50"> </td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_28_1" id="txtCal28_1" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_28_1" id="txtCal28_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_28_1" id="txtCal28_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_28_1" id="txtCal28_1" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_28_1" id="total_sum_value_28_1" value="">-</td>
+                            <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_28_1">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row29">
+                          <input type="hidden" name="row_id" value="29">
+                            <td class="column0 style7 s"><input type="text" name="activities_29" id="" value="[৫.২] এমএফআই সুবিধাভোগীদের সংখ্যা বৃদ্ধি"> </td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_29" id="" value="[৫.২.১] সুবিধাভোগীর সংখ্যা"> </td>
+                            <td class="column2 style6 s"><input type="text" name="unit_29" id="" value="সংখ্যা (লক্ষ) [ক্রমপুঞ্জিভুত]"> </td>
+                            <td class="column3 style56 n"><input type="text" name="performance_index_values_29" id="" value="2"> </td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_29" id="" value="335"> </td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_29" id="txtCal29" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_29" id="txtCal29" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_29" id="txtCal29" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_29" id="txtCal29" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_29" id="total_sum_value_29" value="">-</td>
+                            <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_29">
+                                         <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row30">
+                          <input type="hidden" name="row_id" value="30">
+                            <td class="column0 style7 s"><input type="text" name="activities_30" id="" value="[৫.৩] নারীদের মধ্যে ক্ষুদ্রঋণ বিতরণ কার্যক্রম তত্ত্বাবধান"> </td>
+                            <td class="column1 style7 s"><input type="text" name="performance_index_30" id="" value="[৫.৩.১] ক্ষুদ্রঋণ গ্রহণকারী নারীর সংখ্যা"> </td>
+                            <td class="column2 style6 s"><input type="text" name="unit_30" id="" value="সংখ্যা (লক্ষ) [ক্রমপুঞ্জিভুত]"> </td>
+                            <td class="column3 style56 n"><input type="text" name="performance_index_values_30" id="" value="2"> </td>
+                            <td class="column4 style8 n"><input type="text" name="annual_target_30" id="" value="240"> </td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition1_30" id="txtCal30" value="">-</td>
+                            <td class="column5 style7 s"><input type="text"  name="acquisition2_30" id="txtCal30" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition3_30" id="txtCal30" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"  name="acquisition4_30" id="txtCal30" value="">-</td>
+                            <td class="column6 style7 s"><input type="text"   name="total_sum_value_30" id="total_sum_value_30" value="">-</td>
+                             <td class="column7 style6 s">
+                                          <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Select Division</label>
+                                        <select class="form-control select2" id="" name="branch_responsible_implementation_30">
+                                       <option selected >Select Division</option>
+                                          @foreach ($testybro as $division)
+                                              <option value="{{ $division -> id }}">{{ $division -> name }}</option>
+                                          @endforeach
+                   
+                                        </select>
+                                      </div>
+                            </td>
+                          </tr>
+                          <tr class="row31">
+                          <input type="hidden" name="row_id" value="31">
+                            <td class="column0 style14 s style14" colspan="2"><input type="text" name="activities_31" id="" value="কৌশলগত উদ্দেশ্য মোট= (৩৯টি সূচক)"> </td>
+                            <td class="column2 style15 null"></td>
+                            <td class="column3 style16 n"><input type="text" name="performance_index_values_31" id="" value="70"> </td>
+                            <td class="column4 style17 null"></td>
+                            <td class="column5 style17 null"></td>
+                            <td class="column6 style17 null"></td>
+                            <td class="column7 style17 null"></td>
+                          </tr>
+                      </tbody>
+                </table>
+            </div>
+            
+        <button type="submit" class="btn btn-success">সংরক্ষণ করুন</button>
+        <button type="" class="btn btn-danger">সংশোধন</button>
+          </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#basic-datatable').DataTable({
+        });
+    });
+    $("#submitForm").submit(function (e) {
+        e.preventDefault();
+        $('#loader').show();
+        $(".error_msg").html('');
+        var data = new FormData($('#submitForm')[0]);
+
+        if (confirm("Do you want store this form??") == true) {
+           
+               $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            method: "POST",
+            url: "{{url("store-form-2.1")}}",
+            data: data,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data, textStatus, jqXHR) {
+            alert('Form Submitted Successfully!');
+            $('#loader').hide();
+           location.reload();
+            }
+        }).done(function () {
+            $("#success_msg").html("Data Save Successfully");
+          //  window.location.href = "{{url("store-form-2.1")}}";
+            location.reload();
+        }).fail(function (data, textStatus, jqXHR) {
+            $('#loader').hide();
+            var json_data = JSON.parse(data.responseText);
+            $.each(json_data.errors, function (key, value) {
+                $("#" + key).after("<span class='error_msg' style='color: red;font-weigh: 600'>" + value + "</span>");
+            });
+        });
+
+} else {
+          text = "You canceled!";
+}
+
+       
+    });
+
+
+    $("#myTable").on('input', '#txtCal1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+	});
+		
+		
+    $("#myTable").on('input', '#txtCal2', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal2").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_2").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+	});
+		
+		
+         $("#myTable").on('input', '#txtCal3', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal3").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_3").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+		 });
+
+       $("#myTable").on('input', '#txtCal4', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal4").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_4").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+  });
+         
+
+    $("#myTable").on('input', '#txtCal5', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal5").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_5").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+    });
+         
+      $("#myTable").on('input', '#txtCal6', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal6").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_6").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+      });
+         
+        $("#myTable").on('input', '#txtCal7', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal7").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_7").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+        });
+         
+          $("#myTable").on('input', '#txtCal8', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal8").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_8").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+          });
+         
+            $("#myTable").on('input', '#txtCal9', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal9").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_9").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+            });
+         
+              $("#myTable").on('input', '#txtCal9', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal9").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_9").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+              });
+         
+                $("#myTable").on('input', '#txtCal10', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal10").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_10").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+                });
+         
+                  $("#myTable").on('input', '#txtCal11', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal11").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_11").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+                  });
+         
+                    $("#myTable").on('input', '#txtCal12', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal12").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_12").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+                    });
+         
+
+                      $("#myTable").on('input', '#txtCal13', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal13").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_13").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+                      });
+         
+
+       $("#myTable").on('input', '#txtCal14', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal14").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_14").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+       });
+         
+       
+         $("#myTable").on('input', '#txtCal15', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal15").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_15").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });
+         
+
+           $("#myTable").on('input', '#txtCal16', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal16").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_16").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+           });
+         
+         $("#myTable").on('input', '#txtCal17', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal17").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_17").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });    
+         
+
+
+      $("#myTable").on('input', '#txtCal18', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal18").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_18").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+      });
+         
+      
+        $("#myTable").on('input', '#txtCal19', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal19").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_19").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+        });
+         
+
+          $("#myTable").on('input', '#txtCal20', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal20").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_20").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+          });
+         
+
+        $("#myTable").on('input', '#txtCal21', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal21").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_21").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+        });
+        
+           $("#myTable").on('input', '#txtCal22', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal22").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_22").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+           });    
+         
+
+
+        $("#myTable").on('input', '#txtCal23', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal23").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_23").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+        });
+         
+        
+          $("#myTable").on('input', '#txtCal24', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal24").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_24").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+          });
+         $("#myTable").on('input', '#txtCal25', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal25").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_25").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });  
+         
+       $("#myTable").on('input', '#txtCal26', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal26").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_26").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+       });
+         
+         $("#myTable").on('input', '#txtCal27', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal27").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_27").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });
+         
+         $("#myTable").on('input', '#txtCal28', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal28").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_28").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });
+         
+         $("#myTable").on('input', '#txtCal29', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal29").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_29").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });
+         
+           $("#myTable").on('input', '#txtCal30', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal30").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_30").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+           });
+         
+         $("#myTable").on('input', '#txtCal8_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal8_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_8_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });
+         
+           $("#myTable").on('input', '#txtCal11_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal11_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_11_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+           });
+         
+
+         $("#myTable").on('input', '#txtCal11_2', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal11_2").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_11_2").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+         });
+         
+           $("#myTable").on('input', '#txtCal12_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal12_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_12_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+           });
+         
+
+           $("#myTable").on('input', '#txtCal15_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal15_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_15_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+           });
+         
+          $("#myTable").on('input', '#txtCal21_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal21_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_21_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+          });
+         
+          $("#myTable").on('input', '#txtCal27_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal27_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_27_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+          });
+         
+          $("#myTable").on('input', '#txtCal28_1', function () {
+       let calculated_total_sum = 0;
+     
+       $("#myTable #txtCal28_1").each(function () {
+           let get_textbox_value = $(this).val();
+           if ($.isNumeric(get_textbox_value)) {
+              calculated_total_sum += parseFloat(get_textbox_value);
+              }                  
+            });
+             $("input#total_sum_value_28_1").val(calculated_total_sum);
+             console.log(calculated_total_sum);
+		 });  
+</script>

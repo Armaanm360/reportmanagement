@@ -1,0 +1,7 @@
+#intro {
+    background-image: url(./img/Business-reports.jpg);
+    height: 100vh;
+  }
+  .btn-block.ripple-surface i {
+    margin-left: 7px;
+  }

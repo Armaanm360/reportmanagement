@@ -1,0 +1,91 @@
+                @foreach ($users_get_form as $item)
+                    <div class="col-md-3" style="font-family: Noto Sans Bengali;!important">
+                        <div class="card shadow gradient-border bg-mute" id="box">
+                            <div class="card-header">
+                                <div class="text-center">
+                                    @if (isset($item->role_name) == 'ICT CELL')
+                                        <i class="fa-brands fa-instalod f display-4"></i>
+                                    @elseif (isset($item->role_name) == 'Ministry Deparment')
+                                        <i class="fa-brands fa-firstdraft display-4"></i>
+                                    @elseif (isset($item->role_name) == 'All Regulatory')
+                                        <i class="fa-brands fa-canadian-maple-leaf display-4"></i>
+                                    @elseif (isset($item->role_name) == 'All Organization Head')
+                                        <i class="fa-brands fa-centercode display-4"></i>
+                                    @elseif (isset($item->role_name) == 'Organization User')
+                                        <i class="fa-brands fa-docker display-4"></i>
+                                    @elseif (isset($item->role_name) == 'Branch User')
+                                        <i class="fa-brands fa-hive display-4"></i>
+                                    @endif
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-title mb-2 text-muted font-weight-light">Division</span>
+                                <h3 class="card-subtitle font-weight-bold">
+                                    {{ $usessrname->getRoleByUser($item->sender_id) }}<i class="fas fa-acorn"></i>
+                                </h3>
+
+
+
+                                <div class="shadow p-3 mb-0 bg-white rounded mt-3">
+                                    <span class="font-weight-bold">Received By:</span> <span
+                                        class="text-info font-weight-bold">{{ $usessrname->getDepartmentUser($item->sender_id) }}</span>
+
+                                </div>
+                                <div class="shadow p-3 mb-2 bg-light rounded mt-3">
+                                    <div class="input-group mt-2">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Deadline</span>
+                                        </div>
+                                        <input type="text" aria-label="First name" class="form-control text-danger"
+                                            value="8/29/2022" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="shadow p-4 mb-2 bg-white rounded mt-3">
+                                    <div class="row align-center">
+                                        <span class="badge badge-pill badge-secondary">recived</span>
+                                        <span class="badge badge-pill badge-info">Filled</span>
+                                        <span class="badge badge-pill badge-success">Approved</span>
+                                        <span class="badge badge-pill badge-danger">Declined</span>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="shadow p-3 mb-0 bg-white rounded mt-3">
+                                    <span class="text-info font-weight-bold">Progress Rate</span>
+                                    <div class="progress mt-2">
+                                        <div class="bar" style="width:50%">
+                                            <p class="percent">50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <br>
+
+                                {{-- <div class="shadow p-3 mb-2 bg-white  mt-2 text-center">
+                                    <span>Status</span>
+                                    <span class="badge badge-dark">Received</span>
+                                </div> --}}
+
+
+
+
+                            </div>
+                            <div class="card-footer specific">
+                                {{-- <button type="button" class="btn btn-outline-info btn-lg btn-block"
+                                    disabled>Approved</button> --}}
+
+
+                                <span class="upsale-button">
+                                    <span class="lead">Approved</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                @endforeach

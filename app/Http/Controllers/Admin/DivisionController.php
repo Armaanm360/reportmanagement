@@ -1,0 +1,148 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Division;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use App\Models\Institutions;
+
+class DivisionController extends Controller
+{
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        SwitchLanguage(Session::get('language'));
+        if (Auth::user()->hasRole('super-admin')) {
+            $data['all_institutions'] = Institutions::all();
+            $data['all_division'] = Division::all();
+        } else {
+            $data['all_institutions'] = Institutions::whereId(Auth::user()->institution_id)->get();
+            $data['all_division'] = Division::whereInstitutionId(Auth::user()->institution_id)->get();
+        }
+        return view('admin.pages.division.list_division', $data);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        $division = new Division;
+
+        $division->name = $request->name;
+        $division->description = $request->description;
+        $division->parent_id = $request->parent_id;
+        if ($request->institution_id) {
+            $division->institution_id = $request->institution_id;
+        } else {
+            $division->institution_id = Auth::user()->institution_id;
+        }
+        $division->save();
+
+        if ($division) {
+            Session::put(['title' => 'Alert', 'message' => 'Division has been created successfully!']); //             
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        SwitchLanguage(Session::get('language'));
+
+        if (Auth::user()->hasRole('super-admin')) {
+            $data['all_institutions'] = Institutions::all();
+            $data['all_division'] = Division::all();
+        } else {
+            $data['all_institutions'] = Institutions::whereId(Auth::user()->institution_id)->get();
+            $data['all_division'] = Division::whereInstitutionId(Auth::user()->institution_id)->get();
+        }
+
+        $data['division'] = Division::find($id);
+        //echo "<pre>";print_r($data['subject_list']);die();
+        return view('admin.pages.division.edit_division', $data);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        $division = Division::find($id);
+
+        $division->name = $request->name;
+        $division->description = $request->description;
+        $division->parent_id = $request->parent_id;
+        if ($request->institution_id) {
+            $division->institution_id = $request->institution_id;
+        } else {
+            $division->institution_id = Auth::user()->institution_id;
+        }
+        $division->save();
+
+        if ($division) {
+            Session::put(['title' => 'Alert', 'message' => 'Division has been updated successfully!']); //             
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Division::find($id)->delete();
+        return 'okey';
+    }
+}
